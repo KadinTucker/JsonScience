@@ -21,7 +21,6 @@ def loadJson(filename):
         file = open(filename, 'r')
     except:
         print('Failed to load ' + filename + '!')
-        input()
         return
     return json.load(file)
 
