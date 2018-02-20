@@ -5,7 +5,6 @@ By Kadin Tucker
 
 import json
 import matplotlib as mpl
-
 """
 Used JSON Format:
     [
@@ -28,7 +27,7 @@ def determineValidityOfData(data):
     assert type(data[0]) is str, "Missing plot title."
     assert type(data[1]) is str, "Missing x-axis title."
     assert type(data[3]) is str, "Missing y-axis title."
-    assert len(data[2]) == data[4], "X and Y value lists are not the same length."
+    assert len(data[2]) == len(data[4]), "X and Y value lists are not the same length."
 
 def main():
     data = loadJson(input('Load what file? '))
